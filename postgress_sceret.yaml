@@ -1,0 +1,10 @@
+apiVersion : v1
+kind: Secret
+metadata: 
+ name : my-postgress-secret
+ namespace : myspace
+type : Opaque
+stringData :
+  MONGO_INITDB_ROOT_USERNAME : testuser01
+  MONGO_INITDB_ROOT_PASSWORD : password@123
+

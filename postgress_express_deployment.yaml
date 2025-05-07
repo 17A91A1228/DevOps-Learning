@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgress-express-deployment
+  namespace: myspace
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: postgress-express
+  template:
+    metadata:
+      labels:
+        app: postgress-express
+    spec:
+      containers:
+        - name: mongodb
+          image: mongo:latest
+          ports:
+            - containerPort: 27017
+          envFrom:
+            - configMapRef:
+                name: postgresql
+            - secretRef:
+                name: my-postgress-secret
+
