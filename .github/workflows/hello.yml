@@ -1,0 +1,10 @@
+name: Hello Workflow
+
+on: [push]
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a message
+        run: echo "Hello Sujana! GitHub Actions is running 🎉"
