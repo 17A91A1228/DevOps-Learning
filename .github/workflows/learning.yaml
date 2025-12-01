@@ -1,5 +1,5 @@
 name: learning
-on: [push]
+on: workflow_dispatch
 
 
 jobs :
