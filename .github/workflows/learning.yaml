@@ -1,0 +1,12 @@
+name: learning
+on: [push]
+
+
+jobs :
+  learning-today:
+     runs-on : ubuntu-latest
+     steps:
+       - name:  print a greeting
+         run : echo "ehllo world"
+
+   
